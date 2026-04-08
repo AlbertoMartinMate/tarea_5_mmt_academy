@@ -1,0 +1,108 @@
+@use '../abstracts' as *;
+
+.contacto {
+  padding: 20px 20px 40px 20px;
+
+  @include breakpoint(tablet) {
+    padding: 20px 40px 40px 40px;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__info {
+    margin-bottom: 2rem;
+
+    h2 {
+      color: $orange;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: white;
+      margin-bottom: 0.5rem;
+      font-size: 15px;
+    }
+  }
+
+  &__mapa {
+    margin-bottom: 2rem;
+
+    h2 {
+      color: $orange;
+      margin-bottom: 1rem;
+    }
+
+    iframe {
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+
+  &__form-wrapper {
+    h2 {
+      color: $orange;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    label {
+      color: $orange;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    input, textarea {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid $grey;
+      color: white;
+      font-size: 16px;
+      padding: 8px 0;
+      outline: none;
+      font-family: $primary-font;
+
+      &::placeholder {
+        color: $grey;
+      }
+
+      &:focus {
+        border-bottom-color: $orange;
+      }
+    }
+
+    textarea {
+      resize: none;
+      border: 1px solid $grey;
+      padding: 8px;
+      border-radius: 4px;
+
+      &:focus {
+        border-color: $orange;
+      }
+    }
+  }
+
+  button {
+    align-self: flex-end;
+    margin-top: 1rem;
+  }
+}

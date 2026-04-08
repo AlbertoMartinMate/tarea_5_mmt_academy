@@ -1,0 +1,28 @@
+@use '../abstracts' as *;
+
+
+
+h1 {
+    color: $turquese;
+    font-family: $primary-font;
+    font-weight: 600;
+    font-size: 40px;
+    
+}
+
+h2 {
+    color: $orange;
+    font-family: $primary-font;
+    font-weight: 600;
+    font-size: 20px;
+    
+}
+
+ p{
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 28px;
+    color: $grey;
+  }

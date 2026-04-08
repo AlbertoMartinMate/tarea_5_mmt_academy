@@ -1,0 +1,63 @@
+
+@use '../abstracts' as *;
+
+
+
+.cards {
+
+  padding: 0 30px 60px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  
+  @include breakpoint(tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    background: 
+      linear-gradient(black, black) padding-box,
+      $gradient border-box; // ← truco para border con gradiente
+    border-radius: 8px;
+    padding: 18px 20px;
+
+    @include breakpoint(tablet){
+      padding-top: 28px;
+    }
+
+    .icon {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      color: black;
+      background: $gradient;
+      padding: 8px;
+      border-radius: 50%; // círculo perfecto
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      top: -22px;
+      right: 20px;
+    }
+
+    h2 {
+      padding-bottom: 14px;
+    }
+
+    p {
+    flex: 1; // ← ocupa el espacio disponible
+    }
+
+    a {
+      margin-top: auto; // ← siempre al fondo
+      width: fit-content; // ← solo ocupa lo que necesita
+    }
+    
+
+  }
+}

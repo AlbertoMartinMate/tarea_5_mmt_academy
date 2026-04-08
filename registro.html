@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/img/favicon_amm_black.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro - MMT Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300..700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <header class="header">
+      <button class="header__hamburger" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quienes_somos.html">Quienes somos</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="header__logo">
+        <img src="/img/logo_cabecera2.png" alt="Logo MMT Academy">
+      </div>
+    </header>
+
+    <main>
+      <section class="registro">
+        <h1>Regístrate</h1>
+
+        <form class="registro__form" action="#" method="post" autocomplete="off" enctype="multipart/form-data" novalidate>
+          <input type="hidden" name="company" value="MMT Academy">
+
+          <div class="registro__field">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" name="nombre" id="nombre" placeholder="José Pérez López" autocomplete="off">
+          </div>
+
+          <div class="registro__field">
+            <label for="fecha">Fecha de nacimiento</label>
+            <input type="date" name="fecha" id="fecha">
+          </div>
+
+          <div class="registro__field">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="ejemplo@mail.com" autocomplete="off">
+          </div>
+
+          <div class="registro__field">
+            <label for="direccion">Dirección</label>
+            <input type="text" name="direccion" id="direccion" placeholder="Calle sin nombre, 35, Albuquerque">
+          </div>
+
+          <div class="registro__field">
+            <label for="curso">Curso al que realizar la inscripción</label>
+            <div class="registro__select">
+              <select name="curso" id="curso">
+                <option value="">-</option>
+                <option value="1">Inteligencia Artificial</option>
+                <option value="2">Ciberseguridad</option>
+              </select>
+              <span class="registro__select-arrow">▼</span>
+            </div>
+          </div>
+
+          <div class="registro__field">
+            <label for="foto">Foto</label>
+            <input type="file" id="foto" accept="image/*">
+          </div>
+
+          <div class="registro__field">
+            <label for="bio">Biografía</label>
+            <textarea name="bio" id="bio" rows="5"></textarea>
+          </div>
+
+          <div class="registro__actions">
+            <button type="submit" class="btn">Enviar</button>
+            <button type="reset" class="btn">Borrar formulario</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 - Todos los derechos reservados by Alberto Martin <a href="aviso_legal.html">Aviso Legal</a></p>
+      <div class="footer__logo">
+        <img src="/img/logo_cabecera2.png" alt="Logo MMT Academy">
+      </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+@use '../abstracts' as *;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 16px;
+  font-family: $primary-font;
+  gap: 40px;
+  padding: 10px 30px;
+  text-align: center;
+
+  @include breakpoint(tablethorizontal) {
+    margin-bottom: 70px;
+  }
+
+  @include breakpoint(desktop) {
+    padding: 10px 100px; // ← más padding lateral
+
+    h1 {
+      font-size: 60px;
+      padding-bottom: 40px;
+    }
+}
+
+  &__body {
+    @include breakpoint(desktop) {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      text-align: left;
+    }
+  }
+
+  &__video {
+    width: 100%; // mobile ocupa todo el ancho
+
+    @include breakpoint(desktop) {
+      width: 70%;
+      flex-shrink: 0;
+    }
+  }
+
+  p {
+    @include breakpoint(desktop) {
+      width: 30%;
+      font-size: 30px;
+    }
+  }
+}

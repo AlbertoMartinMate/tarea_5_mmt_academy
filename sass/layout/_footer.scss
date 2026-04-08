@@ -1,0 +1,28 @@
+// _footer.scss
+@use '../abstracts' as *;
+
+.footer {
+  display: flex;
+  position: relative;
+  background-color: $gradient;
+  padding: 0px 14px ;
+
+  @include breakpoint(tablet) {
+    padding: 20px 40px;
+  }
+
+  @include breakpoint(desktop) {
+    padding: 20px 100px;
+  }
+
+  &__logo {
+    img {
+      width: 160px;
+    }
+  
+  }
+
+  p {
+    font-size: 14px;
+  }
+}

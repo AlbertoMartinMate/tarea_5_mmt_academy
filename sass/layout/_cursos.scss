@@ -1,0 +1,119 @@
+@use '../abstracts' as *;
+
+.cursos {
+  text-align: center;
+  padding: 20px 20px 50px 20px;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+  }
+}
+
+.cursos__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include breakpoint(desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 0 100px;
+  }
+}
+
+.cursos__item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform .2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 60%;
+    flex-shrink: 0;
+  }
+}
+
+.cursos__info {
+  text-align: left;
+
+  h2 {
+    margin-bottom: .5rem;
+  }
+}
+
+.curso {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem 1rem;
+  text-align: center;
+
+  @include breakpoint(desktop) {
+    max-width: 1200px;
+    padding: 2rem 1rem 4rem 1rem; // ← menos padding lateral
+  }
+
+  h1 {
+    font-size: 30px;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  &__body {
+    @include breakpoint(desktop) {
+      display: flex;
+      align-items: center;
+      gap: 80px;
+      text-align: left;
+      padding: 20px 0px;
+    }
+
+    p {
+      @include breakpoint(desktop) {
+        width: 40%;
+        flex-shrink: 0;
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__video {
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint(desktop) {
+      width: 60%;
+    }
+
+    iframe {
+      max-width: 100%;
+      border-radius: 12px;
+
+      @include breakpoint(desktop) {
+        width: 100%;
+      }
+    }
+  }
+}

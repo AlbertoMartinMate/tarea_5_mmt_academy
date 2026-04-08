@@ -1,0 +1,112 @@
+@use '../abstracts' as *;
+//dejamos pendiente el desplegable de cursos, q no se ve bien. con js lo modificaremos
+.registro {
+  padding: 20px 20px 40px 20px;
+
+  @include breakpoint(tablet) {
+    padding: 20px 40px 40px 40px;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    label {
+      color: $orange;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    input, textarea {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid $grey;
+      color: white;
+      font-size: 16px;
+      padding: 8px 0;
+      outline: none;
+      font-family: $primary-font;
+
+      &::placeholder {
+        color: $grey;
+      }
+
+      &:focus {
+        border-bottom-color: $orange;
+      }
+    }
+
+    input[type="date"] {
+      color-scheme: dark;
+      color: white;
+    }
+
+    textarea {
+      resize: none;
+      border: 1px solid $grey;
+      padding: 8px;
+      border-radius: 4px;
+
+      &:focus {
+        border-color: $orange;
+      }
+    }
+  }
+
+  &__select {
+    position: relative;
+    border-bottom: 1px solid $grey;
+
+    select {
+      width: 100%;
+      appearance: none;
+      -webkit-appearance: none;
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 16px;
+      padding: 8px 0;
+      cursor: pointer;
+      outline: none;
+      font-family: $primary-font;
+
+      option {
+        background-color: black;
+        color: white;
+      }
+    }
+
+    &-arrow {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $orange;
+      pointer-events: none;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+}
