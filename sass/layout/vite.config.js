@@ -4,6 +4,7 @@ import { resolve } from 'path'
 export default defineConfig({
   base: '/tarea_5_mmt_academy/',
   build: {
+    outDir:'docs', 
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
